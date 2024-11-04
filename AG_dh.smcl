@@ -1,0 +1,706 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\JJH\Desktop\saesol\farm\AG_dh.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}17 Aug 2019, 13:08:08
+{txt}
+{com}. 
+. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JJH\AppData\Local\Temp\STD3f1c_000000.tmp"
+{txt}
+{com}. use "2010연계용2015(v38).dta"
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JJH\AppData\Local\Temp\STD3f1c_000000.tmp"
+{txt}
+{com}. append using "estimation2010(0625).dta"
+{txt}{p 0 7 2}
+(note: variable
+v6 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+exp was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v9 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v18 was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v24 was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v25 was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v26 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v27 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v28 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v29 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v30 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v35 was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v36 was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v37 was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v38 was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v39 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v46 was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v47 was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v48 was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v49 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v50 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v95 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v96 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v97 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v98 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v99 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v100 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v101 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v102 was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v103 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+mainincome was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v125 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v131 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v132 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v133 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v134 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v142 was 
+byte, now long to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+farmtype was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v144 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v145 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v156 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v157 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v158 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+v159 was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+owner was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+edu was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+level was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+sales was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+emp was 
+byte, now int to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+ITgeneral was 
+byte, now float to accommodate using data's values)
+{p_end}
+{p 0 7 2}
+(note: variable
+machinery was 
+byte, now float to accommodate using data's values)
+{p_end}
+(label Sales already defined)
+(label crop already defined)
+(label farmtype already defined)
+(label mainincome already defined)
+(label region already defined)
+(label sales_channel already defined)
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JJH\AppData\Local\Temp\STD3f1c_000000.tmp"
+{txt}
+{com}. keep if even==1
+{txt}(86,039 observations deleted)
+
+{com}. keep if Sales>0 & glass==0
+{txt}(1,140 observations deleted)
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JJH\AppData\Local\Temp\STD3f1c_000000.tmp"
+{txt}
+{com}. *경지면적당 판매금액
+. gen sales_m=600000 if sales==2
+{txt}(118,531 missing values generated)
+
+{com}. replace sales_m=2100000 if sales==3
+{txt}(3,927 real changes made)
+
+{com}. replace sales_m=4000000 if sales==4
+{txt}(5,736 real changes made)
+
+{com}. replace sales_m=7500000 if sales==5
+{txt}(11,660 real changes made)
+
+{com}. replace sales_m=15000000 if sales==6
+{txt}(17,600 real changes made)
+
+{com}. replace sales_m=25000000 if sales==7
+{txt}(18,654 real changes made)
+
+{com}. replace sales_m=40000000 if sales==8
+{txt}(24,116 real changes made)
+
+{com}. replace sales_m=75000000 if sales==9
+{txt}(25,552 real changes made)
+
+{com}. replace sales_m=150000000 if sales==10
+{txt}(8,975 real changes made)
+
+{com}. replace sales_m=350000000 if sales==11
+{txt}(2,125 real changes made)
+
+{com}. replace sales_m=500000000 if sales==12
+{txt}(186 real changes made)
+
+{com}. 
+. gen unitsales=sales_m/total_land
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JJH\AppData\Local\Temp\STD3f1c_000000.tmp"
+{txt}
+{com}.  churdle linear lnauto age_sixtyfour age_oversixtyfour ///
+>  overhigh exp  농업수입뿐임 농업수입이많음 ITgeneral  ///
+>  ownland  lntotal_land emp adultnumber ///
+>  cropnumber 친환경 도매시장 농협 직거래 rural   ///
+>  AG_IN_TOWN2 corporation cooperative   ///
+> 정책작물비율 year2015 ///
+> 강원 충청 전라 경상 제주  , ///
+> select( age_sixtyfour age_oversixtyfour ///
+>  overhigh exp  농업수입뿐임 농업수입이많음 ITgeneral  ///
+>  ownland  lntotal_land emp adultnumber ///
+>  cropnumber 친환경 도매시장 농협 직거래 rural   ///
+>  AG_IN_TOWN2 corporation cooperative   ///
+> 정책작물비율 year2015 ///
+> 강원 충청 전라 경상 제주 ) ll(0) vce(robust) 
+ 
+{res}{txt}Iteration 0:{space 3}log pseudolikelihood = {res:-59724.723}  
+Iteration 1:{space 3}log pseudolikelihood = {res:-59724.713}  
+Iteration 2:{space 3}log pseudolikelihood = {res:-59724.713}  
+{res}
+{txt}Cragg hurdle regression{col 49}Number of obs{col 67}= {res}   120,716
+{txt}{col 49}Wald chi2({res}27{txt}){col 67}= {res}  11764.69
+{txt}{col 49}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log pseudolikelihood = {res}-59724.713{txt}{col 49}Pseudo R2{col 67}= {res}    0.2038
+
+{txt}{hline 18}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 19}{c |}{col 31}    Robust
+{col 1}         lnauto_m{col 19}{c |}      Coef.{col 31}   Std. Err.{col 43}      z{col 51}   P>|z|{col 59}     [95% Con{col 72}f. Interval]
+{hline 18}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}lnauto_m          {txt}{c |}
+{space 4}age_sixtyfour {c |}{col 19}{res}{space 2}-.0004876{col 31}{space 2} .0113759{col 42}{space 1}   -0.04{col 51}{space 3}0.966{col 59}{space 4}-.0227839{col 72}{space 3} .0218086
+{txt}age_oversixtyfour {c |}{col 19}{res}{space 2}-.0512706{col 31}{space 2} .0160602{col 42}{space 1}   -3.19{col 51}{space 3}0.001{col 59}{space 4} -.082748{col 72}{space 3}-.0197932
+{txt}{space 9}overhigh {c |}{col 19}{res}{space 2}-.0012807{col 31}{space 2} .0095578{col 42}{space 1}   -0.13{col 51}{space 3}0.893{col 59}{space 4}-.0200137{col 72}{space 3} .0174522
+{txt}{space 14}exp {c |}{col 19}{res}{space 2}-.0031322{col 31}{space 2} .0003954{col 42}{space 1}   -7.92{col 51}{space 3}0.000{col 59}{space 4}-.0039072{col 72}{space 3}-.0023573
+{txt}{space 5}농업수입뿐임 {c |}{col 19}{res}{space 2} .1986215{col 31}{space 2} .0198217{col 42}{space 1}   10.02{col 51}{space 3}0.000{col 59}{space 4} .1597717{col 72}{space 3} .2374713
+{txt}{space 3}농업수입이많음 {c |}{col 19}{res}{space 2} .1342358{col 31}{space 2} .0203678{col 42}{space 1}    6.59{col 51}{space 3}0.000{col 59}{space 4} .0943157{col 72}{space 3} .1741559
+{txt}{space 8}ITgeneral {c |}{col 19}{res}{space 2} .0328461{col 31}{space 2} .0084414{col 42}{space 1}    3.89{col 51}{space 3}0.000{col 59}{space 4} .0163012{col 72}{space 3}  .049391
+{txt}{space 10}ownland {c |}{col 19}{res}{space 2} .0312399{col 31}{space 2} .0102293{col 42}{space 1}    3.05{col 51}{space 3}0.002{col 59}{space 4} .0111908{col 72}{space 3} .0512889
+{txt}{space 5}lntotal_land {c |}{col 19}{res}{space 2}  .559748{col 31}{space 2}  .007306{col 42}{space 1}   76.61{col 51}{space 3}0.000{col 59}{space 4} .5454285{col 72}{space 3} .5740675
+{txt}{space 14}emp {c |}{col 19}{res}{space 2} .1750957{col 31}{space 2} .0085767{col 42}{space 1}   20.42{col 51}{space 3}0.000{col 59}{space 4} .1582857{col 72}{space 3} .1919057
+{txt}{space 6}adultnumber {c |}{col 19}{res}{space 2} .0183715{col 31}{space 2} .0033618{col 42}{space 1}    5.46{col 51}{space 3}0.000{col 59}{space 4} .0117825{col 72}{space 3} .0249604
+{txt}{space 7}cropnumber {c |}{col 19}{res}{space 2}-.0736483{col 31}{space 2} .0024779{col 42}{space 1}  -29.72{col 51}{space 3}0.000{col 59}{space 4}-.0785049{col 72}{space 3}-.0687918
+{txt}{space 11}친환경 {c |}{col 19}{res}{space 2} .1316706{col 31}{space 2} .0282175{col 42}{space 1}    4.67{col 51}{space 3}0.000{col 59}{space 4} .0763652{col 72}{space 3} .1869759
+{txt}{space 3}도매시장공판장 {c |}{col 19}{res}{space 2}-.0478569{col 31}{space 2} .0144345{col 42}{space 1}   -3.32{col 51}{space 3}0.001{col 59}{space 4}-.0761481{col 72}{space 3}-.0195657
+{txt}{space 13}농협 {c |}{col 19}{res}{space 2}-.0355549{col 31}{space 2} .0154129{col 42}{space 1}   -2.31{col 51}{space 3}0.021{col 59}{space 4}-.0657635{col 72}{space 3}-.0053462
+{txt}{space 11}직거래 {c |}{col 19}{res}{space 2}-.2228747{col 31}{space 2} .0254962{col 42}{space 1}   -8.74{col 51}{space 3}0.000{col 59}{space 4}-.2728463{col 72}{space 3}-.1729031
+{txt}{space 12}rural {c |}{col 19}{res}{space 2}-.0694452{col 31}{space 2}  .010534{col 42}{space 1}   -6.59{col 51}{space 3}0.000{col 59}{space 4}-.0900915{col 72}{space 3}-.0487989
+{txt}{space 6}AG_IN_TOWN2 {c |}{col 19}{res}{space 2} .3329754{col 31}{space 2}   .03344{col 42}{space 1}    9.96{col 51}{space 3}0.000{col 59}{space 4} .2674342{col 72}{space 3} .3985165
+{txt}{space 6}corporation {c |}{col 19}{res}{space 2} .0172117{col 31}{space 2} .0108686{col 42}{space 1}    1.58{col 51}{space 3}0.113{col 59}{space 4}-.0040904{col 72}{space 3} .0385139
+{txt}{space 6}cooperative {c |}{col 19}{res}{space 2}-.0040547{col 31}{space 2} .0090822{col 42}{space 1}   -0.45{col 51}{space 3}0.655{col 59}{space 4}-.0218555{col 72}{space 3} .0137461
+{txt}{space 5}정책작물비율 {c |}{col 19}{res}{space 2} .4017491{col 31}{space 2} .0106493{col 42}{space 1}   37.73{col 51}{space 3}0.000{col 59}{space 4} .3808769{col 72}{space 3} .4226213
+{txt}{space 9}year2015 {c |}{col 19}{res}{space 2} .1069118{col 31}{space 2} .0083932{col 42}{space 1}   12.74{col 51}{space 3}0.000{col 59}{space 4} .0904614{col 72}{space 3} .1233622
+{txt}{space 13}강원 {c |}{col 19}{res}{space 2}-.0490635{col 31}{space 2} .0236549{col 42}{space 1}   -2.07{col 51}{space 3}0.038{col 59}{space 4}-.0954263{col 72}{space 3}-.0027008
+{txt}{space 13}충청 {c |}{col 19}{res}{space 2}  .149133{col 31}{space 2} .0151803{col 42}{space 1}    9.82{col 51}{space 3}0.000{col 59}{space 4} .1193802{col 72}{space 3} .1788859
+{txt}{space 13}전라 {c |}{col 19}{res}{space 2}-.0008843{col 31}{space 2} .0160522{col 42}{space 1}   -0.06{col 51}{space 3}0.956{col 59}{space 4}-.0323459{col 72}{space 3} .0305774
+{txt}{space 13}경상 {c |}{col 19}{res}{space 2} .0703152{col 31}{space 2} .0139184{col 42}{space 1}    5.05{col 51}{space 3}0.000{col 59}{space 4} .0430356{col 72}{space 3} .0975948
+{txt}{space 13}제주 {c |}{col 19}{res}{space 2} .0338167{col 31}{space 2} .0407187{col 42}{space 1}    0.83{col 51}{space 3}0.406{col 59}{space 4}-.0459905{col 72}{space 3} .1136239
+{txt}{space 12}_cons {c |}{col 19}{res}{space 2} 3.038057{col 31}{space 2} .0623454{col 42}{space 1}   48.73{col 51}{space 3}0.000{col 59}{space 4} 2.915862{col 72}{space 3} 3.160252
+{txt}{hline 18}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}selection_ll      {txt}{c |}
+{space 4}age_sixtyfour {c |}{col 19}{res}{space 2}-.0017523{col 31}{space 2} .0142547{col 42}{space 1}   -0.12{col 51}{space 3}0.902{col 59}{space 4}-.0296911{col 72}{space 3} .0261865
+{txt}age_oversixtyfour {c |}{col 19}{res}{space 2}-.1696682{col 31}{space 2} .0192648{col 42}{space 1}   -8.81{col 51}{space 3}0.000{col 59}{space 4}-.2074265{col 72}{space 3}-.1319099
+{txt}{space 9}overhigh {c |}{col 19}{res}{space 2}  .126966{col 31}{space 2} .0113873{col 42}{space 1}   11.15{col 51}{space 3}0.000{col 59}{space 4} .1046473{col 72}{space 3} .1492848
+{txt}{space 14}exp {c |}{col 19}{res}{space 2}-.0031097{col 31}{space 2} .0004365{col 42}{space 1}   -7.12{col 51}{space 3}0.000{col 59}{space 4}-.0039652{col 72}{space 3}-.0022542
+{txt}{space 5}농업수입뿐임 {c |}{col 19}{res}{space 2} .2063298{col 31}{space 2} .0195407{col 42}{space 1}   10.56{col 51}{space 3}0.000{col 59}{space 4} .1680308{col 72}{space 3} .2446288
+{txt}{space 3}농업수입이많음 {c |}{col 19}{res}{space 2} .2311751{col 31}{space 2} .0204622{col 42}{space 1}   11.30{col 51}{space 3}0.000{col 59}{space 4}   .19107{col 72}{space 3} .2712803
+{txt}{space 8}ITgeneral {c |}{col 19}{res}{space 2} .2323182{col 31}{space 2} .0104531{col 42}{space 1}   22.22{col 51}{space 3}0.000{col 59}{space 4} .2118305{col 72}{space 3} .2528059
+{txt}{space 10}ownland {c |}{col 19}{res}{space 2} .2297425{col 31}{space 2}  .012664{col 42}{space 1}   18.14{col 51}{space 3}0.000{col 59}{space 4} .2049215{col 72}{space 3} .2545636
+{txt}{space 5}lntotal_land {c |}{col 19}{res}{space 2} .1130523{col 31}{space 2} .0063192{col 42}{space 1}   17.89{col 51}{space 3}0.000{col 59}{space 4} .1006668{col 72}{space 3} .1254378
+{txt}{space 14}emp {c |}{col 19}{res}{space 2} .0781607{col 31}{space 2}  .010191{col 42}{space 1}    7.67{col 51}{space 3}0.000{col 59}{space 4} .0581867{col 72}{space 3} .0981347
+{txt}{space 6}adultnumber {c |}{col 19}{res}{space 2} .0259964{col 31}{space 2} .0040638{col 42}{space 1}    6.40{col 51}{space 3}0.000{col 59}{space 4} .0180316{col 72}{space 3} .0339612
+{txt}{space 7}cropnumber {c |}{col 19}{res}{space 2}-.0075086{col 31}{space 2} .0021702{col 42}{space 1}   -3.46{col 51}{space 3}0.001{col 59}{space 4}-.0117621{col 72}{space 3}-.0032552
+{txt}{space 11}친환경 {c |}{col 19}{res}{space 2}  .514793{col 31}{space 2} .0339003{col 42}{space 1}   15.19{col 51}{space 3}0.000{col 59}{space 4} .4483497{col 72}{space 3} .5812364
+{txt}{space 3}도매시장공판장 {c |}{col 19}{res}{space 2} .2869273{col 31}{space 2} .0150563{col 42}{space 1}   19.06{col 51}{space 3}0.000{col 59}{space 4} .2574175{col 72}{space 3}  .316437
+{txt}{space 13}농협 {c |}{col 19}{res}{space 2} .2416499{col 31}{space 2} .0163179{col 42}{space 1}   14.81{col 51}{space 3}0.000{col 59}{space 4} .2096674{col 72}{space 3} .2736323
+{txt}{space 11}직거래 {c |}{col 19}{res}{space 2} .2463004{col 31}{space 2} .0228688{col 42}{space 1}   10.77{col 51}{space 3}0.000{col 59}{space 4} .2014784{col 72}{space 3} .2911223
+{txt}{space 12}rural {c |}{col 19}{res}{space 2}-.0155502{col 31}{space 2} .0130081{col 42}{space 1}   -1.20{col 51}{space 3}0.232{col 59}{space 4}-.0410456{col 72}{space 3} .0099451
+{txt}{space 6}AG_IN_TOWN2 {c |}{col 19}{res}{space 2} 7.368205{col 31}{space 2} .0914623{col 42}{space 1}   80.56{col 51}{space 3}0.000{col 59}{space 4} 7.188943{col 72}{space 3} 7.547468
+{txt}{space 6}corporation {c |}{col 19}{res}{space 2} .2768875{col 31}{space 2} .0136577{col 42}{space 1}   20.27{col 51}{space 3}0.000{col 59}{space 4} .2501188{col 72}{space 3} .3036561
+{txt}{space 6}cooperative {c |}{col 19}{res}{space 2} .1584338{col 31}{space 2} .0104753{col 42}{space 1}   15.12{col 51}{space 3}0.000{col 59}{space 4} .1379026{col 72}{space 3}  .178965
+{txt}{space 5}정책작물비율 {c |}{col 19}{res}{space 2} .3540698{col 31}{space 2} .0140663{col 42}{space 1}   25.17{col 51}{space 3}0.000{col 59}{space 4} .3265003{col 72}{space 3} .3816392
+{txt}{space 9}year2015 {c |}{col 19}{res}{space 2} .1843082{col 31}{space 2} .0100842{col 42}{space 1}   18.28{col 51}{space 3}0.000{col 59}{space 4} .1645434{col 72}{space 3} .2040729
+{txt}{space 13}강원 {c |}{col 19}{res}{space 2}-.0262232{col 31}{space 2} .0258585{col 42}{space 1}   -1.01{col 51}{space 3}0.311{col 59}{space 4}-.0769048{col 72}{space 3} .0244585
+{txt}{space 13}충청 {c |}{col 19}{res}{space 2} .0519745{col 31}{space 2} .0173303{col 42}{space 1}    3.00{col 51}{space 3}0.003{col 59}{space 4} .0180078{col 72}{space 3} .0859412
+{txt}{space 13}전라 {c |}{col 19}{res}{space 2} .1132082{col 31}{space 2} .0174584{col 42}{space 1}    6.48{col 51}{space 3}0.000{col 59}{space 4} .0789903{col 72}{space 3} .1474261
+{txt}{space 13}경상 {c |}{col 19}{res}{space 2} -.226549{col 31}{space 2} .0159664{col 42}{space 1}  -14.19{col 51}{space 3}0.000{col 59}{space 4}-.2578426{col 72}{space 3}-.1952553
+{txt}{space 13}제주 {c |}{col 19}{res}{space 2}-.0395999{col 31}{space 2} .0550436{col 42}{space 1}   -0.72{col 51}{space 3}0.472{col 59}{space 4}-.1474833{col 72}{space 3} .0682834
+{txt}{space 12}_cons {c |}{col 19}{res}{space 2}-3.290803{col 31}{space 2} .0608818{col 42}{space 1}  -54.05{col 51}{space 3}0.000{col 59}{space 4}-3.410129{col 72}{space 3}-3.171477
+{txt}{hline 18}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}lnsigma           {txt}{c |}
+{space 12}_cons {c |}{col 19}{res}{space 2}-.5983739{col 31}{space 2} .0070172{col 42}{space 1}  -85.27{col 51}{space 3}0.000{col 59}{space 4}-.6121275{col 72}{space 3}-.5846204
+{txt}{hline 18}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+           /sigma {c |}{col 19}{res}{space 2} .5497048{col 31}{space 2} .0038574{col 59}{space 4} .5421961{col 72}{space 3} .5573174
+{txt}{hline 18}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. estimate store dbhd
+{txt}
+{com}. estout dbhd, cell( b(star fmt(%9.3f)) se(par fmt(%9.3f))) ///
+> starlevels(* 0.1 ** 0.05 *** 0.01) legend varwidth(25)
+{res}
+{txt}{hline 41}
+{txt}                                  dbhd   
+{txt}                                  b/se   
+{txt}{hline 41}
+{res}lnauto_m                                 {txt}
+{txt}age_sixtyfour            {res}       -0.000   {txt}
+                         {res}      (0.011)   {txt}
+{txt}age_oversixtyfour        {res}       -0.051***{txt}
+                         {res}      (0.016)   {txt}
+{txt}overhigh                 {res}       -0.001   {txt}
+                         {res}      (0.010)   {txt}
+{txt}exp                      {res}       -0.003***{txt}
+                         {res}      (0.000)   {txt}
+{txt}농업수입뿐임             {res}        0.199***{txt}
+                         {res}      (0.020)   {txt}
+{txt}농업수입이많음           {res}        0.134***{txt}
+                         {res}      (0.020)   {txt}
+{txt}ITgeneral                {res}        0.033***{txt}
+                         {res}      (0.008)   {txt}
+{txt}ownland                  {res}        0.031***{txt}
+                         {res}      (0.010)   {txt}
+{txt}lntotal_land             {res}        0.560***{txt}
+                         {res}      (0.007)   {txt}
+{txt}emp                      {res}        0.175***{txt}
+                         {res}      (0.009)   {txt}
+{txt}adultnumber              {res}        0.018***{txt}
+                         {res}      (0.003)   {txt}
+{txt}cropnumber               {res}       -0.074***{txt}
+                         {res}      (0.002)   {txt}
+{txt}친환경                   {res}        0.132***{txt}
+                         {res}      (0.028)   {txt}
+{txt}도매시장공판장           {res}       -0.048***{txt}
+                         {res}      (0.014)   {txt}
+{txt}농협                     {res}       -0.036** {txt}
+                         {res}      (0.015)   {txt}
+{txt}직거래                   {res}       -0.223***{txt}
+                         {res}      (0.025)   {txt}
+{txt}rural                    {res}       -0.069***{txt}
+                         {res}      (0.011)   {txt}
+{txt}AG_IN_TOWN2              {res}        0.333***{txt}
+                         {res}      (0.033)   {txt}
+{txt}corporation              {res}        0.017   {txt}
+                         {res}      (0.011)   {txt}
+{txt}cooperative              {res}       -0.004   {txt}
+                         {res}      (0.009)   {txt}
+{txt}정책작물비율             {res}        0.402***{txt}
+                         {res}      (0.011)   {txt}
+{txt}year2015                 {res}        0.107***{txt}
+                         {res}      (0.008)   {txt}
+{txt}강원                     {res}       -0.049** {txt}
+                         {res}      (0.024)   {txt}
+{txt}충청                     {res}        0.149***{txt}
+                         {res}      (0.015)   {txt}
+{txt}전라                     {res}       -0.001   {txt}
+                         {res}      (0.016)   {txt}
+{txt}경상                     {res}        0.070***{txt}
+                         {res}      (0.014)   {txt}
+{txt}제주                     {res}        0.034   {txt}
+                         {res}      (0.041)   {txt}
+{txt}_cons                    {res}        3.038***{txt}
+                         {res}      (0.062)   {txt}
+{txt}{hline 41}
+{res}selection_ll                             {txt}
+{txt}age_sixtyfour            {res}       -0.002   {txt}
+                         {res}      (0.014)   {txt}
+{txt}age_oversixtyfour        {res}       -0.170***{txt}
+                         {res}      (0.019)   {txt}
+{txt}overhigh                 {res}        0.127***{txt}
+                         {res}      (0.011)   {txt}
+{txt}exp                      {res}       -0.003***{txt}
+                         {res}      (0.000)   {txt}
+{txt}농업수입뿐임             {res}        0.206***{txt}
+                         {res}      (0.020)   {txt}
+{txt}농업수입이많음           {res}        0.231***{txt}
+                         {res}      (0.020)   {txt}
+{txt}ITgeneral                {res}        0.232***{txt}
+                         {res}      (0.010)   {txt}
+{txt}ownland                  {res}        0.230***{txt}
+                         {res}      (0.013)   {txt}
+{txt}lntotal_land             {res}        0.113***{txt}
+                         {res}      (0.006)   {txt}
+{txt}emp                      {res}        0.078***{txt}
+                         {res}      (0.010)   {txt}
+{txt}adultnumber              {res}        0.026***{txt}
+                         {res}      (0.004)   {txt}
+{txt}cropnumber               {res}       -0.008***{txt}
+                         {res}      (0.002)   {txt}
+{txt}친환경                   {res}        0.515***{txt}
+                         {res}      (0.034)   {txt}
+{txt}도매시장공판장           {res}        0.287***{txt}
+                         {res}      (0.015)   {txt}
+{txt}농협                     {res}        0.242***{txt}
+                         {res}      (0.016)   {txt}
+{txt}직거래                   {res}        0.246***{txt}
+                         {res}      (0.023)   {txt}
+{txt}rural                    {res}       -0.016   {txt}
+                         {res}      (0.013)   {txt}
+{txt}AG_IN_TOWN2              {res}        7.368***{txt}
+                         {res}      (0.091)   {txt}
+{txt}corporation              {res}        0.277***{txt}
+                         {res}      (0.014)   {txt}
+{txt}cooperative              {res}        0.158***{txt}
+                         {res}      (0.010)   {txt}
+{txt}정책작물비율             {res}        0.354***{txt}
+                         {res}      (0.014)   {txt}
+{txt}year2015                 {res}        0.184***{txt}
+                         {res}      (0.010)   {txt}
+{txt}강원                     {res}       -0.026   {txt}
+                         {res}      (0.026)   {txt}
+{txt}충청                     {res}        0.052***{txt}
+                         {res}      (0.017)   {txt}
+{txt}전라                     {res}        0.113***{txt}
+                         {res}      (0.017)   {txt}
+{txt}경상                     {res}       -0.227***{txt}
+                         {res}      (0.016)   {txt}
+{txt}제주                     {res}       -0.040   {txt}
+                         {res}      (0.055)   {txt}
+{txt}_cons                    {res}       -3.291***{txt}
+                         {res}      (0.061)   {txt}
+{txt}{hline 41}
+{res}lnsigma                                  {txt}
+{txt}_cons                    {res}       -0.598***{txt}
+                         {res}      (0.007)   {txt}
+{txt}{hline 41}
+{txt}* p<0.1, ** p<0.05, *** p<0.01
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JJH\AppData\Local\Temp\STD3f1c_000000.tmp"
+{txt}
+{com}. gen autoyes=auto>0
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JJH\AppData\Local\Temp\STD3f1c_000000.tmp"
+{txt}
+{com}. oneway unitsales autoyes
+
+                        {txt}Analysis of Variance
+    Source              SS         df      MS            F     Prob > F
+{hline 72}
+Between groups     {res} 1.5486e+19      1   1.5486e+19    507.31     0.0000
+{txt} Within groups     {res} 3.6848e+21 120714   3.0525e+16
+{txt}{hline 72}
+    Total          {res} 3.7003e+21 120715   3.0653e+16
+
+{txt}Bartlett's test for equal variances:  chi2({res}1{txt}) = {res} 1.3e+03{txt}  Prob>chi2 = {res}0.000
+{txt}
+{com}. oneway sales_m autoyes
+
+                        {txt}Analysis of Variance
+    Source              SS         df      MS            F     Prob > F
+{hline 72}
+Between groups     {res} 1.3592e+19      1   1.3592e+19   4060.27     0.0000
+{txt} Within groups     {res} 4.0409e+20 120714   3.3475e+15
+{txt}{hline 72}
+    Total          {res} 4.1768e+20 120715   3.4601e+15
+
+{txt}Bartlett's test for equal variances:  chi2({res}1{txt}) = {res} 4.6e+03{txt}  Prob>chi2 = {res}0.000
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JJH\AppData\Local\Temp\STD3f1c_000000.tmp"
+{txt}
+{com}. ttest sales_m, by(autoyes) unequal
+
+{txt}Two-sample t test with unequal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}101,377{col 22} 4.44e+07{col 34} 168601.7{col 46} 5.37e+07{col 58} 4.40e+07{col 70} 4.47e+07
+       {txt}1 {c |}{res}{col 12} 19,339{col 22} 7.33e+07{col 34} 547120.9{col 46} 7.61e+07{col 58} 7.22e+07{col 70} 7.44e+07
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}120,716{col 22} 4.90e+07{col 34} 169301.5{col 46} 5.88e+07{col 58} 4.87e+07{col 70} 4.93e+07
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-2.89e+07{col 34} 572510.1{col 58}-3.01e+07{col 70}-2.78e+07
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}-50.5302
+{txt}Ho: diff = 0                     Satterthwaite's degrees of freedom = {res} 23145.4
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. ttest unitsales, by(autoyes) unequal
+
+{txt}Two-sample t test with unequal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}101,377{col 22} 6.03e+07{col 34}   564462{col 46} 1.80e+08{col 58} 5.92e+07{col 70} 6.14e+07
+       {txt}1 {c |}{res}{col 12} 19,339{col 22} 9.12e+07{col 34}  1047463{col 46} 1.46e+08{col 58} 8.91e+07{col 70} 9.32e+07
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}120,716{col 22} 6.52e+07{col 34} 503912.7{col 46} 1.75e+08{col 58} 6.43e+07{col 70} 6.62e+07
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-3.09e+07{col 34}  1189873{col 58}-3.32e+07{col 70}-2.85e+07
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}-25.9514
+{txt}Ho: diff = 0                     Satterthwaite's degrees of freedom = {res} 31690.4
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JJH\AppData\Local\Temp\STD3f1c_000000.tmp"
+{txt}
+{com}. anova unitsales autoyes age_sixtyfour age_oversixtyfour overhigh c.exp 농업수입뿐임 농업수입이많음 ///
+> c.ownland c.lntotal_land emp c.adultnumber c.cropnumber  직거래 도매시장 농협 친환경 c.AG_IN_TOWN2 corporation cooperative ///
+> rural c.정책작물비율 강원 충청 전라 경상 제주 year2015, partial
+
+                         {txt}Number of obs = {res}   120,716    {txt}R-squared     ={res}  0.1109
+                         {txt}Root MSE      =   {res} 1.7e+08    {txt}Adj R-squared ={res}  0.1107
+
+                  {txt}Source {c |} Partial SS         df         MS        F    Prob>F
+        {hline 17}{c +}{hline 52}
+                   Model {c |} {res} 4.105e+20         27   1.520e+19    557.74  0.0000
+                         {txt}{c |}
+                 autoyes {c |} {res} 4.581e+18          1   4.581e+18    168.05  0.0000
+{txt}             age_sixty~r {c |} {res} 6.652e+16          1   6.652e+16      2.44  0.1183
+{txt}             age_overs~r {c |} {res} 4.875e+18          1   4.875e+18    178.83  0.0000
+{txt}                overhigh {c |} {res} 3.754e+18          1   3.754e+18    137.72  0.0000
+{txt}                     exp {c |} {res} 4.714e+17          1   4.714e+17     17.29  0.0000
+{txt}             농업수입~임 {c |} {res} 3.714e+19          1   3.714e+19   1362.43  0.0000
+{txt}             농업수입~음 {c |} {res} 2.720e+19          1   2.720e+19    998.02  0.0000
+{txt}                 ownland {c |} {res} 1.530e+17          1   1.530e+17      5.61  0.0178
+{txt}             lntotal_l~d {c |} {res} 2.185e+20          1   2.185e+20   8015.20  0.0000
+{txt}                     emp {c |} {res} 4.184e+19          1   4.184e+19   1534.75  0.0000
+{txt}             adultnumber {c |} {res} 7.591e+18          1   7.591e+18    278.46  0.0000
+{txt}              cropnumber {c |} {res} 5.666e+18          1   5.666e+18    207.86  0.0000
+{txt}                  직거래 {c |} {res} 1.792e+18          1   1.792e+18     65.73  0.0000
+{txt}             도매시장~장 {c |} {res} 1.358e+18          1   1.358e+18     49.82  0.0000
+{txt}                    농협 {c |} {res} 6.046e+17          1   6.046e+17     22.18  0.0000
+{txt}                  친환경 {c |} {res} 1.634e+18          1   1.634e+18     59.95  0.0000
+{txt}             AG_IN_TOWN2 {c |} {res} 5.053e+17          1   5.053e+17     18.54  0.0000
+{txt}             corporation {c |} {res} 5.885e+18          1   5.885e+18    215.88  0.0000
+{txt}             cooperative {c |} {res} 1.965e+17          1   1.965e+17      7.21  0.0073
+{txt}                   rural {c |} {res} 9.136e+17          1   9.136e+17     33.51  0.0000
+{txt}             정책작물~율 {c |} {res} 6.441e+18          1   6.441e+18    236.28  0.0000
+{txt}                    강원 {c |} {res} 1.883e+18          1   1.883e+18     69.09  0.0000
+{txt}                    충청 {c |} {res} 3.146e+18          1   3.146e+18    115.40  0.0000
+{txt}                    전라 {c |} {res} 6.962e+18          1   6.962e+18    255.42  0.0000
+{txt}                    경상 {c |} {res} 4.641e+18          1   4.641e+18    170.24  0.0000
+{txt}                    제주 {c |} {res} 9.983e+17          1   9.983e+17     36.62  0.0000
+{txt}                year2015 {c |} {res} 1.107e+17          1   1.107e+17      4.06  0.0439
+                         {txt}{c |}
+                Residual {c |} {res} 3.290e+21    120,688   2.726e+16  
+        {txt}{hline 17}{c +}{hline 52}
+                   Total {c |} {res} 3.700e+21    120,715   3.065e+16  
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\JJH\AppData\Local\Temp\STD3f1c_000000.tmp"
+{txt}
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\JJH\Desktop\saesol\farm\AG_dh.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}17 Aug 2019, 13:17:32
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

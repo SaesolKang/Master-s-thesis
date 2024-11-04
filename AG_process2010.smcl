@@ -1,0 +1,648 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\JJH\Desktop\saesol\farm\AG_process2010.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}17 Aug 2019, 14:12:08
+{txt}
+{com}. 
+. use "2010farm.dta", replace
+{txt}
+{com}. 
+. 
+. *시군구 생성
+. tostring v2, replace
+{txt}v2 was {res:int} now {res:str3}
+
+{com}. replace v2="0"+v2 if strlen(v2)==2
+{txt}(496,098 real changes made)
+
+{com}. egen 읍면동=concat(v1 v2 v3)
+{txt}
+{com}. 
+. rename v43 auto
+{res}{txt}
+{com}. rename v44 ordinary
+{res}{txt}
+{com}. gen glass=v45
+{txt}(136 missing values generated)
+
+{com}. gen mushroom=v46
+{txt}(136 missing values generated)
+
+{com}. gen etc=v47
+{txt}(136 missing values generated)
+
+{com}. 
+. bys 읍면동: egen AG_N2=total(auto>0)
+{txt}
+{com}. bys 읍면동: gen totalfarm_N2=_N
+{txt}
+{com}. gen AG_IN_TOWN2=AG_N2/totalfarm_N2
+{txt}
+{com}. 
+. drop if v5==.
+{txt}(136 observations deleted)
+
+{com}. rename v8 exp
+{res}{txt}
+{com}. 
+. *축산 농가 제외
+. drop if v104==17
+{txt}(81,152 observations deleted)
+
+{com}. 
+. *토지가 0인 농가 제외
+. gen land=v19+v25
+{txt}
+{com}. drop if land==0
+{txt}(46 observations deleted)
+
+{com}. 
+. *판매목적 시설 작물 재배 농가
+. keep if v49==1
+{txt}(988,359 observations deleted)
+
+{com}. 
+. 
+. *가구원 데이터 머징
+. merge 1:m v4 using farm_hhm2010.dta, keep(match) nogenerate force
+{res}{txt}{p 0 7 2}
+(note: variable
+v2 was int in the using data, but will be
+str3 now)
+{p_end}
+{p 0 7 2}
+(note: variable
+v6 was 
+byte, now int to accommodate using data's values)
+{p_end}
+
+{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}         319,699{txt}  
+{col 5}{hline 41}
+
+{com}. keep if owner==1
+{txt}(212,074 observations deleted)
+
+{com}. 
+. 
+. *age
+. gen age_sixtyfour=(age>=50 & age<=64)
+{txt}
+{com}. gen age_oversixtyfour=(age>=65)
+{txt}
+{com}. 
+. *edu
+. 
+. *고졸(2년제 재학과 4년제 재학을 포함)
+. gen high_grad=0
+{txt}
+{com}. replace high_grad=1 if edu==4 & level==3
+{txt}(31,089 real changes made)
+
+{com}. replace high_grad=1 if edu==5 & level==1 | edu==5 & level==2
+{txt}(546 real changes made)
+
+{com}. replace high_grad=1 if edu==6 & level==1 | edu==6 & level==2
+{txt}(572 real changes made)
+
+{com}. 
+. *대졸
+. gen bachelor=0
+{txt}
+{com}. replace bachelor=1 if edu==5 & level==3
+{txt}(3,559 real changes made)
+
+{com}. replace bachelor=1 if edu==6 & level==3
+{txt}(4,437 real changes made)
+
+{com}. replace bachelor=1 if edu==7 
+{txt}(605 real changes made)
+
+{com}. replace bachelor=1 if edu==8 
+{txt}(167 real changes made)
+
+{com}. 
+. gen overhigh=(high_grad==1 | bachelor==1 )
+{txt}
+{com}. 
+. 
+. *전업 및 겸업
+. rename v143 farmtype
+{res}{txt}
+{com}. label define farmtype 1 "farm_only" 2 "more_farm" 3 "more_others"
+{txt}
+{com}. label value farmtype farmtype
+{txt}
+{com}. numlabel _all, add 
+{res}{txt}
+{com}. tab farmtype, gen(farmtypedummy)
+
+      {txt}farmtype {c |}      Freq.     Percent        Cum.
+{hline 15}{c +}{hline 35}
+  1. farm_only {c |}{res}     65,522       60.88       60.88
+{txt}  2. more_farm {c |}{res}     28,806       26.77       87.65
+{txt}3. more_others {c |}{res}     13,297       12.35      100.00
+{txt}{hline 15}{c +}{hline 35}
+         Total {c |}{res}    107,625      100.00
+{txt}
+{com}. gen 농업수입뿐임=farmtypedummy1
+{txt}
+{com}. gen 농업수입이많음=farmtypedummy2
+{txt}
+{com}. 
+. 
+. *Sales channel
+. gen sales_channel=v107
+{txt}
+{com}. gen 농협=sales_channel==3
+{txt}
+{com}. gen 친환경=sales_channel==6
+{txt}
+{com}. gen 직거래=(sales_channel==7)
+{txt}
+{com}. gen 도매시장공판장=(sales_channel<3)
+{txt}
+{com}. label define sales_channel 1 "도매시장" 2 "산지공판장" 3 "농협농업법인" 4 "정부기관공공비축제등" 5 "수집상중간상인밭떼기등" 6 "친환경농산물전문유통업체생협포함" 7 "소비자직접판매" 8 "농축산물가공업체" 9 "농축산물소매상" 10 "기타판매없음포함", replace
+{txt}
+{com}. label value sales_channel sales_channel
+{txt}
+{com}. numlabel _all, add
+{res}{txt}
+{com}. 
+. *생산자 조직 참여
+. *1. 법인만
+. gen corporation=0
+{txt}
+{com}. replace corporation=1 if v114==1 | v115==1 | v116==1
+{txt}(13,557 real changes made)
+
+{com}. 
+. *2. 작목반만 (논벼 작목반, 기타 작목반 제외)
+. gen cooperative=0
+{txt}
+{com}. replace cooperative=1 if v109==1 | v110==1 | v111==1 | v112==1 
+{txt}(47,690 real changes made)
+
+{com}. label variable v109 "채소산나물작목반"
+{txt}
+{com}. label variable v110 "특용약용작목반"
+{txt}
+{com}. label variable v111 "화초관상작목반"
+{txt}
+{com}. label variable v112 "과수작목반"
+{txt}
+{com}. gen 채소산나물작목반=v109
+{txt}
+{com}. gen 특용약용작목반=v110
+{txt}
+{com}. gen 화초관상작목반=v111
+{txt}
+{com}. gen 과수작목반=v112
+{txt}
+{com}. 
+. *employment(significant하면 변수를 추가하자)
+. recode v125 (1=1) (2=0), gen(emp)
+{txt}(55010 differences between v125 and emp)
+
+{com}. 
+. *Land in ownership(시설작물은 자가 확인 불가)
+. gen own=v12+v21
+{txt}
+{com}. gen ownland=own/land
+{txt}
+{com}. 
+. *rural(11-15:읍 21-47:면 51-91:동)
+. gen rural=(v3<50)
+{txt}
+{com}. 
+. *use of IT devices: 컴퓨터밖에 없음. 자동화 목적도 없음.
+. gen ITgeneral=(v145==1)
+{txt}
+{com}. 
+. *region
+. gen province =v1
+{txt}
+{com}. gen region=0
+{txt}
+{com}. replace region=1 if province==11 | province==23 | province==31
+{txt}(16,729 real changes made)
+
+{com}. replace region=2 if province==32
+{txt}(8,408 real changes made)
+
+{com}. replace region=3 if province==25 | province==33 | province==34
+{txt}(22,927 real changes made)
+
+{com}. replace region=4 if province==24 | province==35 | province==36
+{txt}(20,487 real changes made)
+
+{com}. replace region=5 if province==21 | province==22 | province==26 | province==37 | province==38
+{txt}(38,257 real changes made)
+
+{com}. replace region=6 if province==39
+{txt}(817 real changes made)
+
+{com}. label define region 1 "Gyeonggi" 2 "Gangwon" 3 "Chungcheong" 4 "Jeolla" 5 "Gyeongsang" 6 "Jeju" 
+{txt}
+{com}. label value region region
+{txt}
+{com}. numlabel _all, add 
+{res}{txt}
+{com}. tab region, gen(regiondummy)
+
+        {txt}region {c |}      Freq.     Percent        Cum.
+{hline 15}{c +}{hline 35}
+   1. Gyeonggi {c |}{res}     16,729       15.54       15.54
+{txt}    2. Gangwon {c |}{res}      8,408        7.81       23.36
+{txt}3. Chungcheong {c |}{res}     22,927       21.30       44.66
+{txt}     4. Jeolla {c |}{res}     20,487       19.04       63.69
+{txt} 5. Gyeongsang {c |}{res}     38,257       35.55       99.24
+{txt}       6. Jeju {c |}{res}        817        0.76      100.00
+{txt}{hline 15}{c +}{hline 35}
+         Total {c |}{res}    107,625      100.00
+{txt}
+{com}. label variable regiondummy1 "경기" 
+{txt}
+{com}. label variable regiondummy2 "강원" 
+{txt}
+{com}. label variable regiondummy3 "충청" 
+{txt}
+{com}. label variable regiondummy4 "전라" 
+{txt}
+{com}. label variable regiondummy5 "경상" 
+{txt}
+{com}. label variable regiondummy6 "제주"
+{txt}
+{com}. gen 경기=regiondummy1
+{txt}
+{com}. gen 강원=regiondummy2
+{txt}
+{com}. gen 충청=regiondummy3
+{txt}
+{com}. gen 전라=regiondummy4
+{txt}
+{com}. gen 경상=regiondummy5
+{txt}
+{com}. gen 제주=regiondummy6
+{txt}
+{com}. 
+. sort v4
+{txt}
+{com}. 
+. merge 1:m v4 using "2010farmcrop.dta", keep(match) gen(_merge1) force
+{res}{txt}{p 0 7 2}
+(note: variable
+v2 was int in the using data, but will be
+str3 now)
+{p_end}
+
+{col 5}Result{col 38}# of obs.
+{col 5}{hline 41}
+{col 5}not matched{col 30}{res}               0
+{txt}{col 5}matched{col 30}{res}         519,949{txt}  (_merge1==3)
+{col 5}{hline 41}
+
+{com}. destring crop, replace force
+{txt}crop: all characters numeric; {res}replaced {txt}as {res}long
+{txt}
+{com}. 
+. *정책작물
+. bys v4: gen 오이=area if crop==2010700
+{txt}(511,416 missing values generated)
+
+{com}. bys v4: gen 수박=area if crop==2010800
+{txt}(506,416 missing values generated)
+
+{com}. bys v4: gen 토마토=area if crop==2010900
+{txt}(509,868 missing values generated)
+
+{com}. bys v4: gen 딸기=area if crop==2011000
+{txt}(509,165 missing values generated)
+
+{com}. bys v4: gen 참외=area if crop==2011100
+{txt}(512,376 missing values generated)
+
+{com}. bys v4: gen 파프리카포함서양채소=area if crop==2011200
+{txt}(516,310 missing values generated)
+
+{com}. bys v4: gen 장미국화포함꽃=area if crop==2020100
+{txt}(514,818 missing values generated)
+
+{com}. bys v4: gen 멜론포함기타시설작물=area if crop==2060200
+{txt}(493,990 missing values generated)
+
+{com}. bys v4: egen 버섯류=total(area) if crop==2040100 | crop==2040200 | crop==2050100 
+{txt}(514435 missing values generated)
+
+{com}. 
+. 
+. egen 오이_=max(오이), by(v4) 
+{txt}(470037 missing values generated)
+
+{com}. egen 수박_=max(수박), by(v4) 
+{txt}(456748 missing values generated)
+
+{com}. egen 토마토_=max(토마토), by(v4) 
+{txt}(464849 missing values generated)
+
+{com}. egen 딸기_=max(딸기), by(v4) 
+{txt}(476681 missing values generated)
+
+{com}. egen 참외_=max(참외), by(v4) 
+{txt}(497134 missing values generated)
+
+{com}. egen 파프리카포함서양채소_=max(파프리카포함서양채소), by(v4) 
+{txt}(501298 missing values generated)
+
+{com}. egen 장미국화포함꽃_=max(장미국화포함꽃), by(v4) 
+{txt}(504552 missing values generated)
+
+{com}. egen 멜론포함기타시설작물_=max(멜론포함기타시설작물), by(v4) 
+{txt}(377892 missing values generated)
+
+{com}. egen 버섯류_=max(버섯류), by(v4)
+{txt}(494154 missing values generated)
+
+{com}. 
+. replace 오이_=0 if 오이_==.
+{txt}(470,037 real changes made)
+
+{com}. replace 수박_=0 if 수박_==.
+{txt}(456,748 real changes made)
+
+{com}. replace 토마토_=0 if 토마토_==.
+{txt}(464,849 real changes made)
+
+{com}. replace 딸기_=0 if 딸기_==.
+{txt}(476,681 real changes made)
+
+{com}. replace 참외_=0 if 참외_==.
+{txt}(497,134 real changes made)
+
+{com}. replace 파프리카포함서양채소_=0 if 파프리카포함서양채소_==.
+{txt}(501,298 real changes made)
+
+{com}. replace 장미국화포함꽃_=0 if 장미국화포함꽃_==.
+{txt}(504,552 real changes made)
+
+{com}. replace 멜론포함기타시설작물_=0 if 멜론포함기타시설작물_==.
+{txt}(377,892 real changes made)
+
+{com}. replace 버섯류_=0 if 버섯류_==.
+{txt}(494,154 real changes made)
+
+{com}. 
+. gen 정책작물=오이_+수박_+토마토_+딸기_+참외_+파프리카포함서양채소_+장미국화포함꽃_+멜론포함기타시설작물_
+{txt}
+{com}. 
+. bys v4: gen cropnumber=_N
+{txt}
+{com}. bys v4: gen croporder=_n
+{txt}
+{com}. 
+. gsort v4 -area
+{txt}
+{com}. order v4 area
+{txt}
+{com}. drop cardnumber area2  _merge* 재배방법 친환경유무 ///
+>  오이 수박 토마토 딸기 참외 파프리카포함서양채소 장미국화포함꽃 멜론포함기타시설작물 버섯류 
+{txt}
+{com}. 
+. reshape wide crop area, i(v4) j(croporder)
+{txt}(note: j = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36)
+
+Data{col 36}long{col 43}->{col 48}wide
+{hline 77}
+Number of obs.                 {res}  519949   {txt}->{res}  107625
+{txt}Number of variables            {res}     230   {txt}->{res}     299
+{txt}j variable (36 values)        {res}croporder   {txt}->   (dropped)
+xij variables:
+                                   {res}crop   {txt}->   {res}crop1 crop2 ... crop36
+                                   area   {txt}->   {res}area1 area2 ... area36
+{txt}{hline 77}
+
+{com}. forvalues i=1/36 {c -(}
+{txt}  2{com}. replace area`i'=0 if area`i'==.
+{txt}  3{com}. {c )-}
+{txt}(0 real changes made)
+(11,190 real changes made)
+(30,679 real changes made)
+(47,606 real changes made)
+(61,189 real changes made)
+(72,082 real changes made)
+(80,749 real changes made)
+(87,665 real changes made)
+(93,065 real changes made)
+(97,138 real changes made)
+(100,244 real changes made)
+(102,419 real changes made)
+(103,989 real changes made)
+(105,067 real changes made)
+(105,787 real changes made)
+(106,337 real changes made)
+(106,721 real changes made)
+(106,982 real changes made)
+(107,183 real changes made)
+(107,300 real changes made)
+(107,389 real changes made)
+(107,450 real changes made)
+(107,498 real changes made)
+(107,537 real changes made)
+(107,561 real changes made)
+(107,574 real changes made)
+(107,589 real changes made)
+(107,604 real changes made)
+(107,610 real changes made)
+(107,614 real changes made)
+(107,617 real changes made)
+(107,621 real changes made)
+(107,623 real changes made)
+(107,624 real changes made)
+(107,624 real changes made)
+(107,624 real changes made)
+
+{com}. egen 재배면적=rowtotal(area*), missing
+{txt}
+{com}. egen 재배면적2=rowtotal(area*)
+{txt}
+{com}. forvalues i=1/36 {c -(}
+{txt}  2{com}. replace 재배면적2=재배면적2-area`i' if crop`i'>4010000 & crop`i'<4040200
+{txt}  3{com}. {c )-}
+{txt}(2,633 real changes made)
+(2,659 real changes made)
+(2,062 real changes made)
+(1,526 real changes made)
+(1,024 real changes made)
+(797 real changes made)
+(499 real changes made)
+(369 real changes made)
+(231 real changes made)
+(148 real changes made)
+(99 real changes made)
+(66 real changes made)
+(41 real changes made)
+(33 real changes made)
+(20 real changes made)
+(9 real changes made)
+(14 real changes made)
+(6 real changes made)
+(3 real changes made)
+(0 real changes made)
+(3 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+
+{com}. 
+. gen 오이비율=오이/재배면적2
+{txt}
+{com}. gen 수박비율=수박/재배면적2
+{txt}
+{com}. gen 토마토비율=토마토/재배면적2
+{txt}
+{com}. gen 딸기비율=딸기/재배면적2
+{txt}
+{com}. gen 참외비율=참외/재배면적2
+{txt}
+{com}. gen 파프리카포함서양채소비율=파프리카포함서양채소/재배면적2
+{txt}
+{com}. gen 장미국화포함꽃비율=장미국화포함꽃/재배면적2
+{txt}
+{com}. gen 멜론포함기타시설작물비율=멜론포함기타시설작물/재배면적2
+{txt}
+{com}. gen 버섯류비율=버섯류_/재배면적2
+{txt}
+{com}. gen 정책작물비율=정책작물/재배면적2
+{txt}
+{com}. 
+. *전체경지면적
+. gen total_land=land
+{txt}
+{com}. gen total_land_m=10000*total_land
+{txt}
+{com}. gen lntotal_land=log(total_land_m)
+{txt}
+{com}. 
+. 
+. *dependent variable
+. gen auto_m=auto*10000
+{txt}
+{com}. replace auto_m=1 if auto_m==0
+{txt}(95,144 real changes made)
+
+{com}. gen lnauto_m=ln(auto_m)
+{txt}
+{com}. 
+. rename v104 mainincome
+{res}{txt}
+{com}. label define mainincome 1 "논벼(노지)" 2 "논벼(시설)" 3 "식량작물(노지)" 4 "식량작물(시설)" 5 "채소산나물(노지)" 6 "채소산나물(시설)" ///
+> 7 "특용작물버섯(노지)" 8 "특용작물버섯(시설)" 9 "과수(노지)" 10 "과수(시설)" 11 "약용작물(노지)" 12 "약용작물(시설)" 13 "화초관상작물(노지)" ///
+> 14 "화초관상작물(시설)" 15 "기타작물(노지)" 16 "기타작물(시설)" 17 "축산"
+{txt}
+{com}. label value mainincome mainincome
+{txt}
+{com}. numlabel _all, add 
+{res}{txt}
+{com}. *짝수표기
+. gen byte even=~mod(mainincome,2)
+{txt}
+{com}. 
+. tab mainincome, gen(mainincomedummy)
+
+            {txt}mainincome {c |}      Freq.     Percent        Cum.
+{hline 23}{c +}{hline 35}
+         1. 논벼(노지) {c |}{res}     19,827       18.42       18.42
+{txt}     3. 식량작물(노지) {c |}{res}      2,854        2.65       21.07
+{txt}     4. 식량작물(시설) {c |}{res}        807        0.75       21.82
+{txt}   5. 채소산나물(노지) {c |}{res}     11,270       10.47       32.30
+{txt}   6. 채소산나물(시설) {c |}{res}     54,256       50.41       82.71
+{txt} 7. 특용작물버섯(노지) {c |}{res}      1,090        1.01       83.72
+{txt} 8. 특용작물버섯(시설) {c |}{res}      4,450        4.13       87.86
+{txt}         9. 과수(노지) {c |}{res}      3,401        3.16       91.02
+{txt}        10. 과수(시설) {c |}{res}        758        0.70       91.72
+{txt}    11. 약용작물(노지) {c |}{res}        341        0.32       92.04
+{txt}    12. 약용작물(시설) {c |}{res}        180        0.17       92.20
+{txt}13. 화초관상작물(노지) {c |}{res}      1,059        0.98       93.19
+{txt}14. 화초관상작물(시설) {c |}{res}      5,334        4.96       98.14
+{txt}    15. 기타작물(노지) {c |}{res}        234        0.22       98.36
+{txt}    16. 기타작물(시설) {c |}{res}      1,764        1.64      100.00
+{txt}{hline 23}{c +}{hline 35}
+                 Total {c |}{res}    107,625      100.00
+{txt}
+{com}. gen 논벼_노지=mainincomedummy1 
+{txt}
+{com}. gen 식량작물_노지=mainincomedummy2 
+{txt}
+{com}. gen 식량작물_시설=mainincomedummy3 
+{txt}
+{com}. gen 채소산나물_노지=mainincomedummy4 
+{txt}
+{com}. gen 채소산나물_시설= mainincomedummy5
+{txt}
+{com}. gen 특용작물버섯_노지= mainincomedummy6
+{txt}
+{com}. gen 특용작물버섯_시설= mainincomedummy7
+{txt}
+{com}. gen 과수_노지= mainincomedummy8
+{txt}
+{com}. gen 과수_시설= mainincomedummy9
+{txt}
+{com}. gen 약용작물_노지= mainincomedummy10
+{txt}
+{com}. gen 약용작물_시설= mainincomedummy11
+{txt}
+{com}. gen 화초관상작물_노지= mainincomedummy12
+{txt}
+{com}. gen 화초관상작물_시설= mainincomedummy13
+{txt}
+{com}. gen 기타작물_노지= mainincomedummy14
+{txt}
+{com}. gen 기타작물_시설= mainincomedummy15
+{txt}
+{com}. 
+. 
+. *시설 노지 합치기
+. gen 논벼=논벼_노지
+{txt}
+{com}. gen 식량작물=(식량작물_노지==1 | 식량작물_시설==1)
+{txt}
+{com}. gen 채소산나물=(채소산나물_노지==1 | 채소산나물_시설==1)
+{txt}
+{com}. gen 특용작물버섯=(특용작물버섯_노지==1 | 특용작물버섯_시설==1)
+{txt}
+{com}. gen 과수=(과수_노지==1 | 과수_시설==1)
+{txt}
+{com}. gen 약용작물=(약용작물_노지==1 | 약용작물_시설==1)
+{txt}
+{com}. gen 화초관상작물=(화초관상작물_노지==1 | 화초관상작물_시설==1)
+{txt}
+{com}. gen 기타작물=(기타작물_노지==1 | 기타작물_시설==1)
+{txt}
+{com}. gen 주소득시설=(식량작물_시설==1 | 채소산나물_시설==1 | 특용작물버섯_시설==1 | 과수_시설==1 | 약용작물_시설==1 | 화초관상작물_시설==1 | 기타작물_시설==1)
+{txt}
+{com}. 
+. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\JJH\Desktop\saesol\farm\AG_process2010.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}17 Aug 2019, 14:13:05
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
